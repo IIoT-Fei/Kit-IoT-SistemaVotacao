@@ -129,7 +129,7 @@ KitIoT.prototype.saveData = function (data) {
 	}
 	var self    = this,
       URL     = 'http://dca.telefonicabeta.com:8002',
-      rawBody = '|||unknown||chave|'+ data.button +'#|||temperature||temperatura|'+ data.temperature +'#|||illuminance||luminosidade|'+ data.light +'#|||presence||capacitivo|'+ data.capacitive,
+      rawBody = '|||unknown||chave|'+ data.button +'#|||temperature||temperatura|'+ sim +'#|||illuminance||luminosidade|'+ data.light +'#|||presence||capacitivo|'+ nao,
       tokenId = token.getToken(),
       apiKey  = token.getApikey();
 
