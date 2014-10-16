@@ -2,7 +2,10 @@ var kit     = require('./kit'),
     request = require('request'),
     io      = require('socket.io'),
     log     = require('single-line-log').stdout,
-    token   = new kit.Token();
+    token   = new kit.Token(),
+    nao = 0,
+    sim = 0,
+    flag = -2;
 
 //Kit IoT
 var KitIoT = function (console) {
@@ -102,13 +105,29 @@ KitIoT.prototype.start = function () {
   doUpdateDashboard();
   doSaveData();
 
-  self.loop = setInterval(doSaveData, 30000);
+  self.loop = setInterval(doSaveData, 1000);
   self.loopDash = setInterval(doUpdateDashboard, 5000);
 };
 
 //Save data to SBC
 KitIoT.prototype.saveData = function (data) {
-  var self    = this,
+  	if(data.light<500)
+	{
+		flag++;
+	}
+	if(data.light>500 && flag>0)
+	{
+		if(data.button)
+		{
+			sim = sim + 1;
+		}
+		else
+		{
+			nao = nao + 1;
+		}
+		flag = 0;
+	}
+	var self    = this,
       URL     = 'http://dca.telefonicabeta.com:8002',
       rawBody = '|||unknown||chave|'+ data.button +'#|||temperature||temperatura|'+ data.temperature +'#|||illuminance||luminosidade|'+ data.light +'#|||presence||capacitivo|'+ data.capacitive,
       tokenId = token.getToken(),
