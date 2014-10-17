@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+body{
+  background: #fff;
+  font-family: "Trebuchet MS", Arial, Tahoma;
+}
+
+.clear{
+  clear: both;
+}
+
+.pergunta{
+  width:40%;
+  margin-bottom:40px;
+}
+
+.blue{
+  color:#04AFDE;
+  margin-top:80px;
+  margin-bottom:20px;
+  min-width:200px;
+}
+
+.second{
+  margin-bottom:50px;
+  margin-top:60px;
+}
+
+.tudo{
+  background-color:#F5F5F5;
+  height:100%;
+  min-height:700px;
+  border-bottom: 2px #EBE9E8;
+}
+
+.parte2{
+  background-color:#F5F5F5;
+}
+
+.ml{
+  margin-left:49.5%;
+}
+
+.mb{
+  margin-bottom:30px;
+}
+
+.mt{
+  padding-top:20px;
+}
+
+.neg{
+  padding.top:-20px;
+}
+
+.pb{
+  padding-bottom:80px;
+}
+
+.pat{
+  padding-top:100px;
+  text-decoration:none;
+}
+
+.opmenu{
+  list-style:none;
+  padding-top:17px;
+
+}
+
+.bg-blue{
+  background-color:#05E0F0;
+  height:70px;
+  color:#ffffff;
+  margin-top:-20px;
+}
+
+.non{
+  list-style:none;
+  display:inline;
+}
+
+.esq{
+  font-size:30px;
+  color:#00C73C;
+}
+
+.dir{
+  font-size:30px;
+  color:#F02005;
+}
+
+.divisoria{
+  border-bottom:3px red;
+}
+
+.dark-blue{
+  background-color:#00B0C7;
+  height:42px;
+  color:#ffffff;
+}
+
+.pad{
+  padding-top:12px;
+}
+
+table, th, td{
+  width:100%;
+  border:1px solid #05E0F0;
+}
+
+th{
+  background-color:#02C6DB;
+  color:#ffffff;
+  font-size:15px;
+}

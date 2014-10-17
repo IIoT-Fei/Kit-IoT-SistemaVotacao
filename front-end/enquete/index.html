@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Painel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="bg-blue">
+      <h3 class="opmenu text-center"><strong>Painel de perguntas</strong></h3>
+  </div>
+  <section class="container tudo">
+    <section class="divisoria">
+      <h4 class="text-center second">Torne a sua aula mais interativa para seus alunos!</h4>
+      <form role="form tudo">
+        <section class="pergunta center-block">
+          <input type="text" class="form-control" placeholder="Pergunte!" name="perguntabox" id="perguntabox"/>
+        </section>
+        <button type="button" class="btn btn-success center-block" onclick="Gravar()">Gravar</button>
+      </form>
+    </section>
+    <h3 class="text-center blue mb mt"><strong>Dados obtidos</strong></h3>
+    <p class="text-center neg">Total de Votos:</p>
+    <label class="ml pb" id="totalalunos"></label>
+    <ul class="pb">
+      <li class="non esq col-md-6 col-xs-12 text-center">SIM: <label name="resultSim" id="resultSim"></label></li>
+      <li class="non dir col-md-6 col-xs-12 text-center">NAO: <label name="resultNao" id="resultNao"></label></li>
+    </ul>
+    <section class="tab">
+      <table id="tab_results">
+        <tr>
+          <th class="col-md-3 col-sm-3 col-xs-3 text-center">Pergunta</th>
+          <th class="col-md-3 col-sm-3 col-xs-3 text-center">Sim(%)</th>
+          <th class="col-md-3 col-sm-3 col-xs-3 text-center">Nao(%)</th>
+          <th class="col-md-3 col-sm-3 col-xs-3 text-center">Registrado em</th>
+        </tr>
+      </table>
+    </section>
+  </section>
+  <section class="dark-blue text-center">
+    <p class="pad"><strong>Um projeto de Eric, Leandro e Luiz</strong></p>
+  </section>
+
+</body>
+  <script type="text/javascript" src="acesso.js"></script>
+</html>
